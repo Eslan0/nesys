@@ -1,0 +1,7 @@
+.card {
+    min-width: 30vw;
+    text-align: center;
+    padding: 1rem;
+    background: var(--bgcard);
+    border-radius: 8px;
+   }

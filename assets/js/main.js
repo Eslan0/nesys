@@ -1,5 +1,5 @@
 console.clear();
-
+/*
 const cardsContainer = document.querySelector(".cards");
 const cardsContainerInner = document.querySelector(".cards__inner");
 const cards = Array.from(document.querySelectorAll(".card"));
@@ -44,3 +44,4 @@ const initOverlayCard = (cardEl) => {
 
 cards.forEach(initOverlayCard);
 document.body.addEventListener("pointermove", applyOverlayMask);
+*/

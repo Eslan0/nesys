@@ -7,6 +7,7 @@
   <title>Nesys</title>
   <link rel="stylesheet" href="/assets/css/reset.css">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/components/carousel.css">
   <link rel="stylesheet" href="/components/containers.css">
   <link rel="stylesheet" href="/components/cards.css">
 </head>
@@ -21,12 +22,29 @@
         <li><a href="#">Feminino</a></li>
         <li><a href="#">Masculino</a></li>
         <li><a href="#">Sobre</a></li>
-        <li><a href="#">Perfil</a></li>
+        <li>
+          <a href="#"><ion-icon name="person-circle"></ion-icon>Perfil</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <div class="carousel">
+      <ul class="slider">
+        <li class="item" style="background-image: url('https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg')">
+          <div class="contente">
+            <h2 class="title">"Lossless Youths"</h2>
+            <p class="description"> O próprio cliente poderá seguir o adipiscing da empresa.
+              Com o tempo a fuga dos prazeres, o direito do corpo de encontrar o presente exceto.
+              Isso é uma coisa trabalhosa. </p>
+            <button>Ler Mais</button>
+          </div>
+        </li>
+        <div class="line">
+          <ion-icon class="btn prev" name="chevron-back-outline"></ion-icon>
+          <ion-icon class="btn next" name="chevron-forward-outline"></ion-icon>
+        </div>
+    </div>
     <section>
       <article>
         <div class="card">Conteudo card 1</div>
@@ -62,7 +80,7 @@
 
       <div class="card_emphas">
         <div class="ghost">
-          <p class="author">Aderstar</p>
+          <p class="author">Monato</p>
           <div class="shadow_type">
             <p class="type">Quente</p>
           </div>
@@ -71,7 +89,7 @@
           <img class="imgp" src="assets/images/camisa-casual-masculina.png" alt="Camisa Casual Masculina com bolsos, camisa fina">
           <div class="ghost">
             <p class="descpt">Camisa Casual com dois bolsos</p>
-            <label class="price">R$: 100</label>
+            <label class="price">R$: 80</label>
           </div>
         </div>
       </div>

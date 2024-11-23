@@ -48,11 +48,12 @@
 
         & .imgp {
             width: 30vw;
+            padding: 1em;
+            border-radius: 10px;
         }
 
         & .descpt, .price {
             width: 50%;
         }
     }
-
 }

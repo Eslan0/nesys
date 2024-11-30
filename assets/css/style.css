@@ -2,9 +2,10 @@
 
 :root {
   --base: #212121;
-  --text: #dddddd;
-  --menu: #1b1b1b;
+  --text: #c4c4c4;
   --line: #eceff133;
+  --bttn: #2c2c2c;
+  --menu: #1b1b1b;
   --bgcard: #2b2b2b;
   --footer: rgb(7, 7, 7);
 }
@@ -21,15 +22,18 @@ header {
   display: flex;
   position: fixed;
   width: 100vw;
+  height: 8vh;
   padding: 10px 1.5em;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px #000;
   justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  box-shadow: -10px 2px 10px #000;
   z-index: 2;
 }
 nav ul {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 nav ul li {
   margin: 0 15px;
@@ -44,9 +48,9 @@ nav ul li a {
 
 main {
   display: flex;
-  padding: 4rem 1.5rem;
+  padding: 8vh 1.5rem;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 section {
   display: flex;
@@ -55,14 +59,13 @@ section {
   padding: 1rem;
   justify-content: center;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
 }
 article {
   flex: 1 1 calc(50% - 20px);
   padding: 1.5rem;
   background: var(--menu);
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 footer {
@@ -77,15 +80,20 @@ footer {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
-  article {
-    flex: 1 1 100%;
-  }
-}
-
 @media screen and (max-width: 767px) and (orientation: landscape) {
   #navigation {
     display: none;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  nav {
+    position: relative;
+    left: -100vw;
+  }
+
+  article {
+    flex: 1 1 100%;
   }
 }
 

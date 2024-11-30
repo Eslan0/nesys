@@ -1,7 +1,92 @@
 .carousel {
+    max-width: 100vw;
+    height: 80vh;
+
+    & .slider {
+        position: absolute;
+        width: 100%;
+        height: 80vh;
+        left: 0;
+
+        & .item {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+
+            & .contente {
+                max-width: 40vw;
+                margin: 0 5vw;
+
+                & .title,
+                .description,
+                .but {
+                    padding: 1rem;
+                }
+
+                & .but {
+                    border-radius: 12px;
+                    border: none;
+                }
+            }
+        }
+    }
+
     & .line {
         display: flex;
         width: 100%;
+        height: 80vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        align-items: center;
         justify-content: space-between;
+        padding: 0 2rem;
+
+        &:hover {
+            .btn {
+                display: block;
+                padding: .7rem;
+                font-size: 1.8rem;
+                background: var(--bttn);
+                opacity: 50%;
+            }
+        }
+
+        & .btn {
+            opacity: 0;
+            transition: 300ms;
+            border-radius: 16px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 90%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .carousel {
+        & .slider {
+            height: 70vh;
+
+            & .item {
+                & .contente {
+                    max-width: 70vw;
+                }
+            }
+        }
+
+        & .line {
+            height: 70vh;
+
+            &:hover {
+                .btn {
+                    padding: .7rem;
+                    font-size: 1.4rem;
+                }
+            }
+        }
     }
 }

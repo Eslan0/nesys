@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="/assets/css/reset.css">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/components/css/carousel.css">
-  <link rel="stylesheet" href="/components/css/containers.css">
   <link rel="stylesheet" href="/components/css/cards.css">
 </head>
 
@@ -23,35 +22,38 @@
         <li><a href="#">Masculino</a></li>
         <li><a href="#">Sobre</a></li>
         <li>
-          <a href="#"><ion-icon name="person-circle"></ion-icon>Perfil</a></li>
+          <a href="#"><ion-icon name="person-circle"></ion-icon>Perfil</a>
+        </li>
       </ul>
     </nav>
   </header>
   <main>
     <div class="carousel">
       <ul class="slider">
-        <li class="item" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1) 80%, rgb(33, 33, 33)100%), url('https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg')">
+        <li class="item"
+          style="background-image: linear-gradient(rgba(0, 0, 0, 0.1) 80%, rgb(33, 33, 33)100%), url('https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg')">
           <div class="contente">
             <h2 class="title">"Lossless Youths"</h2>
             <p class="description"> O próprio cliente poderá seguir o adipiscing da empresa.
               Com o tempo a fuga dos prazeres, o direito do corpo de encontrar o presente exceto.
               Isso é uma coisa trabalhosa. </p>
-              <button class="but">Ler Mais</button>
-            </div>
-          </li>
-          <div class="line">
-            <ion-icon class="btn prev" name="chevron-back-outline"></ion-icon>
-            <ion-icon class="btn next" name="chevron-forward-outline"></ion-icon>
+            <button class="but">Ler Mais</button>
           </div>
+        </li>
+        <div class="line">
+          <ion-icon class="btn prev" name="chevron-back-outline"></ion-icon>
+          <ion-icon class="btn next" name="chevron-forward-outline"></ion-icon>
         </div>
-
+    </div>
     <section>
-      <div id="container">
-        <h2>Destaques</h2>
+      <h2>Destaques</h2>
+      <div class="cardNormal">
       </div>
-        <div class="card"></div>
-        <div class="cardEmphas"></div>
+      <div class="cardEmphas"></div>
     </section>
+
+    <button id="add-section-btn">Adicionar</button>
+    <div id="container" class="card"></div>
   </main>
 
   <!--<aside></aside>-->

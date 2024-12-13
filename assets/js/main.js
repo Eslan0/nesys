@@ -6,7 +6,7 @@ async function loadCard() {
 
     const cardHtml = await response.text();
     
-    document.querySelector('.card').innerHTML = cardHtml;
+    document.querySelector('.cardNormal').innerHTML = cardHtml;
   } catch (error) {
     console.error('Error loading the card:', error);
   }
@@ -27,3 +27,23 @@ async function loadCardEmphas() {
   }
 }
 loadCardEmphas();
+
+/* Função para gerar Seções dinamicamete */
+function addSection(containerId, id, className, content) {
+  const container = document.getElementById(containerId);
+
+  if (!container) {
+    console.error('Contêiner não encotrado!');
+    return;
+  }
+
+  const section = document.createElement('section');
+  if (id) section.id = id;
+  if (className) section.className = className;
+  if (content) section.innerHTML = content;
+
+  container.appendChild(section);
+}
+
+document.getElementById('add-section-btn').addEventListener('click', () => { addSection('container', `section-${Date.now()}`, 'dynamic-section', `<h2>Seção adicionada</h2> <p>Tempo ${new Date().toLocaleTimeString()}.</p>`);
+});

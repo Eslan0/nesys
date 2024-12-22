@@ -45,5 +45,5 @@ function addSection(containerId, id, className, content) {
   container.appendChild(section);
 }
 
-document.getElementById('add-section-btn').addEventListener('click', () => { addSection('container', `section-${Date.now()}`, 'dynamic-section', `<h2>Seção adicionada</h2> <p>Tempo ${new Date().toLocaleTimeString()}.</p>`);
+document.getElementById('add-section-btn').addEventListener('click', () => { addSection('container', `section-${Date.now()}`, 'dynamic-section',`<div class = "card"><h2>Seção adicionada</h2> <p>Tempo ${new Date().toLocaleTimeString()}.</p></div>`);
 });

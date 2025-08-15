@@ -1,20 +1,16 @@
 from flask import Flask, jsonify
 from config import DevelopmentConfig, ProductionConfig
-from app.views.home import home_bp
-from app.views.auth import auth_bp
-from app.views.users import users_bp
-from app.views.products import products_bp
-from app.views.orders import orders_bp
 
-def create_app(config_class=DevelopmentConfig):
+def create_app(config_class=DevelopmentConfig, config_name=None):
   app = Flask(__name__)
   app.config.from_object("config.Config")
-
-  app.register_blueprint(home_bp, url_prefix="/api/v1.2.0")
-  app.register_blueprint(auth_bp, url_prefix="/api/v1.2.0")
-  app.register_blueprint(users_bp, url_prefix="/api/v1.2.0")
-  app.register_blueprint(products_bp, url_prefix="/api/v1.2.0")
-  app.register_blueprint(orders_bp, url_prefix="/api/v1.2.0")
+  
+  from .routes import user_routes, auth_routes, home_routes, product_routes, order_routes
+  app.register_blueprint(user_routes.bp)
+  app.register_blueprint(auth_routes.bp)
+  app.register_blueprint(home_routes.bp)
+  app.register_blueprint(product_routes.bp)
+  app.register_blueprint(order_routes.bp)
 
   @app.errorhandler(404)
   def not_found_error(error):

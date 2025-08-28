@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Nesys</title>
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/login.css">
+    </head>
+
+<body>
+    <main>
+        
+        <div class="container container-login active">
+            <div class="card-header">
+                <h1>Login</h1>
+                </div>
+        
+                <div class="login-card-body">
+            <form method="POST">
+            <label for="email">Email</label>
+            
+            <input type="email" name="email" id="email" placeholder="Digite Seu Email">
+           
+            <label for="password">Senha</label>
+            
+            <input type="password" name="password" id="password" placeholder="Insira Sua Senha">
+           
+            <button type="submit">Entrar</button>
+           
+            <a href="#" onclick="showCard('recovery')">Esqueceu a Senha?</a> 
+            
+            <a href="#" onclick="showCard('register')">Cadastrar-se</a>
+            </div>
+        </div>
+       
+    </form>
+
+       <div class="container container-recovery">
+       
+        <div class="card-header">
+       
+            <h2>Recuperar Senha</h2>
+         </div>  
+        
+         
+         <div class="recovery-card-body">
+         <form method="POST">
+            
+            <label for="email">Digite seu Email</label>
+            
+            <input type="email" name="email" id="email" placeholder="seuemail@exemplo.com" required>
+
+            <button type="submit"> Enviar link de recuperação</button>
+            
+            <p>
+                <a href="#" onclick="showCard('login')" >Voltar para o login</a>
+            </p>
+            
+        </form>
+            </div>
+        </div>
+
+        <div class="container container-register">
+            <form method="POST">
+            
+                <div class="card-header">
+            
+                    <h2>Cadastrar-se</h2>
+            </div>
+            
+            <div class="register-card-body">
+            <input type="text" placeholder="Nome Completo" required>
+            
+            <input type="email" placeholder="E-mail" required>
+            
+            <input type="password" placeholder="Senha" required>
+            
+            <input type="password" placeholder="Confirmar Senha" required>
+            
+            <button type="submit">Criar Conta</button>
+            
+            <a href="#" onclick="showCard('login')" >Já tem conta?</a>
+            
+        </form>
+            </div>
+        </div>
+            
+    </main>
+
+        <script>
+            function showCard(card) {
+                document.querySelectorAll(".container").forEach(div=> {div.classList.remove("active")});
+            const target = document.querySelector(".container-" + card);
+            if (target) {
+                target.classList.add("active");
+            } else {
+                console.warn("Card não encontrado", card);
+            }
+            return false;
+            
+            }
+            
+        </script>
+   
+    
+    
+    
+    
